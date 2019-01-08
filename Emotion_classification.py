@@ -112,7 +112,7 @@ print ("Test Accuracy = " + str(preds[1]))
 
 
 
-img_path = 'images/Test_4.jpg'
+img_path = 'images/Test_1.jpg'
 img = image.load_img(img_path, target_size=(64, 64))
 imshow(img)
 x = image.img_to_array(img)
@@ -120,7 +120,7 @@ x = np.expand_dims(x, axis=0)
 x = preprocess_input(x)
 Z=int(happyModel.predict(x))
 if Z:
-    print("Welcome because you are happy")
+    print("Happy Face")
 else:
-    print("You are not allowed")
+    print("Sad Face")
 
