@@ -118,9 +118,5 @@ imshow(img)
 x = image.img_to_array(img)
 x = np.expand_dims(x, axis=0)
 x = preprocess_input(x)
-Z=int(happyModel.predict(x))
-if Z:
-    print("Happy Face")
-else:
-    print("Sad Face")
+print(happyModel.predict(x))
 
